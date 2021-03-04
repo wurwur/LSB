@@ -9,7 +9,7 @@ Commands exemples :
 
 # Encoding : 
 
-```py 
+```bash
 python3 lsb.py -e input.png "secret message here" output.png 0
 ```
 
