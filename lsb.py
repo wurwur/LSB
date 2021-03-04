@@ -23,12 +23,10 @@ def encode(image,arr,output,c):
 			x+="110010111100111110000110000111000111100101"
 			x+=str(bin(ord(ele))[2:])
 			x+="110010111100111110000110000111000111100101"
-			print(ele,x)
+
 			
 		arr = x
-		print(x)
 	arr = str(((img.width*img.height)-len(arr))*"0"+arr)
-	print(arr)
 	x = 0
 	for i in range(img.width):
 		for j in range(img.height):
@@ -36,7 +34,8 @@ def encode(image,arr,output,c):
 			val = val[:9] + arr[x]
 			data[i,j] = (int(val,2),data[i,j][1],data[i,j][2])
 			x+=1
-	img.save("lsb.png")
+	print("LSB image saved as",output)
+	img.save(output)
 
 
 def decode(image,c):
@@ -64,10 +63,7 @@ def decode(image,c):
 		if ele != "":
 			print(chr(int("0b"+ele,2)),end="")
 	print("")
-	#try:
-	#	print("".join([chr(int("0b"+ele,2)) for ele in "".join(dec).split("110010111100111110000110000111000111100101")[1:]]))
-	#except ValueError:
-	#	pass
+
 
 if "-h" in args:
 	print("-d : decode\n-e : encode\n\n Encoding : input file (.png) ; message to encrypt ; output file name ; channel (r,g,b)\n Decoding : input file (.png) ; channel (r,g,b)")
@@ -88,6 +84,3 @@ if args[1] == "-d":
 		exit()
 	decode(args[2],args[3])
 
-#"0b"+(8-len(bin(3)[:2]))*"0"+bin(3)[2:]
-# python3 lsb.py -e nighty.png 555 lsb.png 0
-# python3 lsb.py -d lsb.png 0
