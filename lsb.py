@@ -57,8 +57,6 @@ def decode(image,c):
 		for j in range(img.height):
 			val = (8-len(bin(data[i,j][c])))*"0"+bin(data[i,j][c])[2:]
 			dec.append(str(val)[len(val)-1])
-	print(int("0b"+"".join(list(map(str,dec))),2))
-	print("".join(dec).split("110010111100111110000110000111000111100101")[1:])
 	for ele in "".join(dec).split("110010111100111110000110000111000111100101")[1:]:
 		if ele != "":
 			print(chr(int("0b"+ele,2)),end="")
