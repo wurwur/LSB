@@ -19,6 +19,7 @@ The "secret message" as an arg can only be a single word/number. If you want to 
 
 # Decoding : 
 
-python3 lsb.py -d intput.png 0 
+```py
+python3 lsb.py -d intput.png 0```
 
 The 0, once again, stands for the channel, so RED, GREEN or BLUE 
