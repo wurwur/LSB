@@ -9,7 +9,7 @@ Commands exemples :
 
 # Encoding : 
 
-python3 lsb.py -e input.png "secret message here" output.png 0 
+```py python3 lsb.py -e input.png "secret message here" output.png 0 ```
 
 The 0 stands for the channel, or RED, GREEN, BLUE 
 
