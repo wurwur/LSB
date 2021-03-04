@@ -24,3 +24,5 @@ python3 lsb.py -d intput.png 0
 ```
 
 The 0, once again, stands for the channel, so RED, GREEN or BLUE 
+
+(dont try to decode pictures from the internet its not going to work, it uses some specific implementation security I made)
